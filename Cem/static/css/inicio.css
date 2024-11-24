@@ -1,3 +1,10 @@
 #hol{
     text-align: center;
 }
+
+.carousel-inner{
+    height: 600px;}
+
+.carousel-item img {
+    object-fit: contain; 
+  }
