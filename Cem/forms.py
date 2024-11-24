@@ -4,10 +4,7 @@ from .models import Alumno
 class RegistroAlumnoForm(forms.ModelForm):
     class Meta:
         model = Alumno
-        fields = ['nombre', 'apellido_paterno', 'apellido_materno', 'edad', 'correo_electronico', 'contraseña', 'pais', 'telefono']
-        widgets = {
-            'contraseña': forms.PasswordInput(),
-        }
+        fields = ['correo_electronico', 'nombre', 'telefono', 'apellido_paterno', 'apellido_materno', 'edad', 'pais', 'password']  # Cambié 'contraseña' por 'password'
     
     def clean_correo_electronico(self):
         correo = self.cleaned_data.get('correo_electronico')

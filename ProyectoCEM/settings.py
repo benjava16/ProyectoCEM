@@ -100,6 +100,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_URL = '/login/'
+
+AUTHENTICATION_BACKENDS = ['Cem.backends.EmailBackend',
+                           'django.contrib.auth.backends.ModelBackend',]
+
+AUTH_USER_MODEL = 'Cem.Alumno'
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
